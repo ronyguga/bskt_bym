@@ -1,0 +1,28 @@
+/* Mobile-friendly table styling */
+.md-typeset table:not([class]) {
+  font-size: 0.82rem;
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.5em 0.6em;
+}
+
+/* Make video links stand out */
+.md-typeset table a[href*="cloudfront"],
+.md-typeset table a[href*="youtube"] {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Better spacing on mobile */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset table:not([class]) {
+    font-size: 0.78rem;
+  }
+
+  .md-typeset table:not([class]) td,
+  .md-typeset table:not([class]) th {
+    padding: 0.4em 0.5em;
+  }
+}

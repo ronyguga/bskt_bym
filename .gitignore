@@ -1,0 +1,36 @@
+# MkDocs build output
+_site/
+
+# Generated docs (rebuilt by prepare_docs.py)
+docs/ball-handling/
+docs/ultimate-atl/
+docs/ultimate-shooting/
+docs/by-any-means/
+docs/small-guard/
+docs/point-guard/
+docs/pg-flex/
+docs/pg-live/
+docs/bh-mindset/
+docs/pg-iq/
+docs/pg-resources/
+docs/adv-ballhandling/
+docs/extra.css
+
+# Source HTML files (not needed in repo)
+*.html
+
+# HTML asset folders
+*_files/
+
+# IDE / system
+.specstory/
+.vscode/
+.cursor/
+agent-transcripts/
+terminals/
+mcps/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

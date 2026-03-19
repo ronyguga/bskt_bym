@@ -1,0 +1,148 @@
+site_name: Basketball Training Programs
+site_description: CoachIQ Basketball Training - Ball Handling, Athleticism, Shooting & More
+
+docs_dir: docs
+site_dir: _site
+
+use_directory_urls: false
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep orange
+    accent: amber
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+  icon:
+    logo: material/basketball
+
+extra_css:
+  - extra.css
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Ball Handling:
+    - Overview: ball-handling/index.md
+    - Introduction: ball-handling/intro.md
+    - Warmup Tips: ball-handling/warmup_tips.md
+    - Week 1: ball-handling/week01.md
+    - Week 2: ball-handling/week02.md
+    - Week 3: ball-handling/week03.md
+    - Week 4: ball-handling/week04.md
+    - Week 5: ball-handling/week05.md
+    - Week 6: ball-handling/week06.md
+    - Week 7: ball-handling/week07.md
+    - Week 8: ball-handling/week08.md
+    - Week 9: ball-handling/week09.md
+    - Week 10: ball-handling/week10.md
+  - Ultimate Athleticism:
+    - Overview: ultimate-atl/index.md
+    - Introduction: ultimate-atl/intro.md
+    - Week 1: ultimate-atl/week01.md
+    - Week 2: ultimate-atl/week02.md
+    - Week 3: ultimate-atl/week03.md
+    - Week 4: ultimate-atl/week04.md
+    - Week 5: ultimate-atl/week05.md
+    - Week 6: ultimate-atl/week06.md
+    - Week 7: ultimate-atl/week07.md
+    - Week 8: ultimate-atl/week08.md
+    - Week 9: ultimate-atl/week09.md
+    - Week 10: ultimate-atl/week10.md
+    - Week 11: ultimate-atl/week11.md
+    - Week 12: ultimate-atl/week12.md
+    - Week 13: ultimate-atl/week13.md
+    - Week 14: ultimate-atl/week14.md
+    - Week 15: ultimate-atl/week15.md
+    - Week 16: ultimate-atl/week16.md
+    - Week 17: ultimate-atl/week17.md
+    - Week 18: ultimate-atl/week18.md
+    - Week 19: ultimate-atl/week19.md
+    - Week 20: ultimate-atl/week20.md
+    - Week 21: ultimate-atl/week21.md
+    - Week 22: ultimate-atl/week22.md
+    - Week 23: ultimate-atl/week23.md
+    - Week 24: ultimate-atl/week24.md
+    - Week 25: ultimate-atl/week25.md
+  - Ultimate Shooting:
+    - Overview: ultimate-shooting/index.md
+    - Week 1: ultimate-shooting/week01.md
+    - Week 2: ultimate-shooting/week02.md
+    - Week 3: ultimate-shooting/week03.md
+    - Week 4: ultimate-shooting/week04.md
+    - Week 5: ultimate-shooting/week05.md
+    - Week 6: ultimate-shooting/week06.md
+    - Week 7: ultimate-shooting/week07.md
+    - Week 8: ultimate-shooting/week08.md
+    - Week 9: ultimate-shooting/week09.md
+    - Week 10: ultimate-shooting/week10.md
+    - Week 11: ultimate-shooting/week11.md
+    - Week 12: ultimate-shooting/week12.md
+    - Contested Drills: ultimate-shooting/contested.md
+    - Extra Drills: ultimate-shooting/extra.md
+  - By Any Means:
+    - Overview: by-any-means/index.md
+    - Week 1: by-any-means/week01.md
+    - Week 2: by-any-means/week02.md
+    - Week 3: by-any-means/week03.md
+    - Week 4: by-any-means/week04.md
+    - Week 5: by-any-means/week05.md
+    - Week 6: by-any-means/week06.md
+    - Week 7: by-any-means/week07.md
+    - Week 8: by-any-means/week08.md
+    - Week 9: by-any-means/week09.md
+    - Week 10: by-any-means/week10.md
+    - Week 11: by-any-means/week11.md
+    - Week 12: by-any-means/week12.md
+  - Small Guard Essentials:
+    - Overview: small-guard/index.md
+    - Week 1: small-guard/week01.md
+    - Week 2: small-guard/week02.md
+    - Week 3: small-guard/week03.md
+    - Week 4: small-guard/week04.md
+    - Week 5: small-guard/week05.md
+    - Week 6: small-guard/week06.md
+    - Week 7: small-guard/week07.md
+    - Week 8: small-guard/week08.md
+    - Week 9: small-guard/week09.md
+    - Week 10: small-guard/week10.md
+    - Week 11: small-guard/week11.md
+    - Week 12: small-guard/week12.md
+  - Point Guard Program:
+    - Overview: point-guard/index.md
+    - Week 1: point-guard/week01.md
+    - Week 2: point-guard/week02.md
+    - Week 3: point-guard/week03.md
+    - Week 4: point-guard/week04.md
+    - Week 5: point-guard/week05.md
+    - Week 6: point-guard/week06.md
+    - Week 7: point-guard/week07.md
+    - Week 8: point-guard/week08.md
+    - Week 9: point-guard/week09.md
+    - Week 10: point-guard/week10.md
+    - Week 11: point-guard/week11.md
+    - Week 12: point-guard/week12.md
+  - PG Flex Workouts: pg-flex/index.md
+  - PG Live Drills: pg-live/index.md
+  - Ballhandling Mindset: bh-mindset/index.md
+  - Point Guard IQ: pg-iq/index.md
+  - PG Resources: pg-resources/index.md
+  - Advanced Ballhandling: adv-ballhandling/index.md
