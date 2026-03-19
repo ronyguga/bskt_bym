@@ -25,7 +25,7 @@ docs/extra.css
 # IDE / system
 .specstory/
 .vscode/
-.cursor/
+
 agent-transcripts/
 terminals/
 mcps/

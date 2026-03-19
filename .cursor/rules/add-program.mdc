@@ -1,0 +1,52 @@
+---
+description: How to add a new basketball training program to the MkDocs site
+alwaysApply: true
+---
+
+# Adding Basketball Training Programs
+
+This project extracts workout data from CoachIQ HTML files and builds a mobile-friendly MkDocs Material site deployed to GitHub Pages at https://ronyguga.github.io/bskt_bym/
+
+## Two Program Types
+
+### 1. Weekly Programs (multiple weeks with daily workouts)
+Files named `wXX.dY.html`, may include `wXX.film.NAME.html` or `wXX.m.html` (mobility).
+
+```bash
+python extract_program.py "<FolderName>" --program-name "Display Name"
+```
+
+Outputs `<FolderName>/workouts/weekXX.md` + `index.md`.
+
+### 2. Simple Programs (numbered video files, no weekly structure)
+Files named `01 - Title.html`, `02 - Title.html`, etc.
+
+```bash
+python extract_simple.py "<FolderName>" --program-name "Display Name"
+```
+
+Outputs `<FolderName>/workouts/index.md` with a video table. If any files contain Slide/Block workout data (e.g. `DayX.html`), those are rendered as exercise tables below.
+
+## After Extraction, Update 4 Files
+
+1. **`prepare_docs.py`** — Add to `PROGRAMS` dict: `"slug": ROOT / "FolderName" / "workouts"`
+2. **`mkdocs.yml`** — Add nav entry under `nav:`. Weekly programs need per-week entries; simple programs need just `- Name: slug/index.md`
+3. **`docs/index.md`** — Add a row to the programs table
+4. **`.gitignore`** — Add `docs/slug/`
+
+## Build & Deploy
+
+```bash
+python prepare_docs.py    # copies workout .md files into docs/
+mkdocs build              # builds the static site
+git add . && git commit -m "Add <program name>" && git push
+```
+
+GitHub Actions auto-deploys on push to `main`.
+
+## Key Technical Details
+- HTML files use Next.js RSC format; data is extracted via regex from `self.__next_f.push()` calls
+- S3 `.mov` URLs are converted to CloudFront `.mp4` playable links
+- The `BLOCK_RE` regex handles escaped quotes in content fields
+- Film study files use `asset_details` Media structure (no Slides/Blocks)
+- Info-only slides (like "flex day" instructions) render as blockquotes
